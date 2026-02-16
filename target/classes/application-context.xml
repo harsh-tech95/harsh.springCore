@@ -6,9 +6,22 @@
 
     <!-- bean definitions here -->
     
+    <bean name="address" class="com.my.spring.model.Address">
     
-    <bean name="emp" class="com.my.spring.model.employee">
+    <property name="state" value="up"></property>
+    <property name="city" value="Bareilly"></property>
+
     
+    
+    </bean>
+    
+    <bean name="emp" class="com.my.spring.model.employee" autowire="byName">
+    
+    <property name="id" value="101"></property>
+    <property name="name" value="Chotu"></property>
+    <property name="gender" value="male"></property>
+    
+
     
     </bean>
 
