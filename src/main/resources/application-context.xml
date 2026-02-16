@@ -19,8 +19,47 @@
     <property name="id" value="101"></property>
     <property name="name" value="Harsh Mishra"></property>
     <property name="gender" value="male"></property>
-    <property name="address" ref="Add"></property>
+    <property name="list">
+    
+    <list>
+    <value>200</value>
+    <value>200</value>
+    <value>200</value>
+    <value>200</value>
+    
+    </list>
+    
+    </property>
+    
+    <property name="set">
+    
+    <set>
+    
+    <value>200</value>
+    <value>201</value>
+    <value>202</value>
+    <value>203</value>
+    <value>204</value>
+    <value>204</value>
 
+    
+    </set>
+    
+    </property>
+    
+    
+    <property name="map">
+    
+    <map>
+    
+    <entry key="1" value="HARSH"></entry>
+    <entry key="2" value="Arpit"></entry>
+    <entry key="3" value="Prem"></entry>
+    
+    
+    </map>
+    
+    </property>
     
     </bean>
 
