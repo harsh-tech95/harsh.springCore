@@ -7,8 +7,20 @@
     <!-- bean definitions here -->
     
     
-    <bean name="emp" class="com.my.spring.model.employee">
+    <bean name="Add" class="com.my.spring.model.Address">
     
+    <property name="state" value="up"></property>
+    <property name="city" value="Bareilly"></property>
+    </bean>
+    
+    
+    <bean name="emp2" class="com.my.spring.model.employee">
+    
+    <property name="id" value="101"></property>
+    <property name="name" value="Harsh Mishra"></property>
+    <property name="gender" value="male"></property>
+    <property name="address" ref="Add"></property>
+
     
     </bean>
 
