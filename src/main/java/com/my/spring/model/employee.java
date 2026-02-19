@@ -1,40 +1,35 @@
+
 package com.my.spring.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-public class employee {
+@Scope(value = "prototype")
+public class Employee {
 	
-	private int id;
-	private String name,gender;
+	private int id =101;
+	private String name="Guest";
+	private int salary = 10_000;
 	
 	
-	@Autowired
-	private Address address;
-	public employee() {
-		super();
-		// TODO Auto-generated constructor stub
+	private IAddress adddress;
+	
+	public Employee() {
+		
 	}
-	
-	public employee(int id, String name, String gender, Address address) {
+	public Employee(int id, String name, int salary) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.gender = gender;
-		this.address = address;
+		this.salary = salary;
 	}
 	
-	
-
-	public Address getAddress() {
-		return address;
+	public Employee(IAddress address) {
+		this.adddress=address;
 	}
-
-	public void setAddress(Address address) {
-		this.address = address;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -47,19 +42,24 @@ public class employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getGender() {
-		return gender;
+	public int getSalary() {
+		return salary;
 	}
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setSalary(int salary) {
+		this.salary = salary;
 	}
-
+	public IAddress getAdddress() {
+		return adddress;
+	}
+	@Autowired
+	@Qualifier(value = "address1")
+	public void setAdddress(IAddress adddress) {
+		System.out.println("Employee.setAdddress()");
+		this.adddress = adddress;
+	}
 	@Override
 	public String toString() {
-		return "employee [id=" + id + ", name=" + name + ", gender=" + gender + ", address=" + address + "]";
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", adddress=" + adddress + "]";
 	}
 	
-	
-	
-
 }
