@@ -52,7 +52,7 @@ public class Employee {
 		return adddress;
 	}
 	@Autowired
-	@Qualifier(value = "address1")
+	@Qualifier(value = "address2")
 	public void setAdddress(IAddress adddress) {
 		System.out.println("Employee.setAdddress()");
 		this.adddress = adddress;
